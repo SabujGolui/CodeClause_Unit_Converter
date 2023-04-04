@@ -53,71 +53,91 @@ function UnitConverter() {
     setInches(value === "" ? "" : (value * 12).toFixed(2));
   };
   return (
-    <div className="container">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
-            Kilometers
-          </label>
-          <input
-            class="form-control"
-            id="exampleInputEmail1"
-            type="number"
-            value={kilometers}
-            onChange={handleKilometersChange}
-          />
+      <div className="container">
+        <div class="col mt-5 pt-2" id="accordions">
+          <div class="component-wrapper rounded shadow">
+            <div className="p-3 mb-2 bg-body rounded">
+              <div className="accordion-header" id="headingOne">
+                <div
+                  className="accordion-button border-0 "
+                  aria-controls="collapseTwo"
+                >
+                  <h2 className="p-2">Length Conversion</h2>
+                </div>
+              </div>
+              <div
+                className="ListItems border-0 "
+              >
+                <div className="accordion-body text-muted bg-white">
+                  <form>
+                    <div className="mb-3">
+                      <label for="exampleInputEmail1" className="form-label">
+                        Kilometers
+                      </label>
+                      <input
+                        className="form-control"
+                        id="exampleInputEmail1"
+                        type="number"
+                        value={kilometers}
+                        onChange={handleKilometersChange}
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label for="exampleInputPassword1" className="form-label">
+                        Meters
+                      </label>
+                      <input
+                        type="number"
+                        value={meters}
+                        onChange={handleMetersChange}
+                        readOnly
+                        className="form-control"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label for="exampleInputPassword1" className="form-label">
+                        Centimeters
+                      </label>
+                      <input
+                        type="number"
+                        value={centimeters}
+                        onChange={handleCentimetersChange}
+                        className="form-control"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label for="exampleInputPassword1" className="form-label">
+                        Inches
+                      </label>
+                      <input
+                        type="number"
+                        value={inches}
+                        onChange={handleInchesChange}
+                        className="form-control"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label for="exampleInputPassword1" className="form-label">
+                        Feet
+                      </label>
+                      <input
+                        type="number"
+                        value={feet}
+                        onChange={handleFeetChange}
+                        className="form-control"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Meters
-          </label>
-          <input
-            type="number"
-            value={meters}
-            onChange={handleMetersChange}
-            readOnly
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Centimeters
-          </label>
-          <input
-            type="number"
-            value={centimeters}
-            onChange={handleCentimetersChange}
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Inches
-          </label>
-          <input
-            type="number"
-            value={inches}
-            onChange={handleInchesChange}
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
-            Feet
-          </label>
-          <input
-            type="number"
-            value={feet}
-            onChange={handleFeetChange}
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-      </form>
-    </div>
+      </div>
   );
 }
 
