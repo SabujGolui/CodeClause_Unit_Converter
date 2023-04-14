@@ -1,0 +1,13 @@
+body{
+  overflow: hidden;
+}
+  .content {
+    margin-left: 220px;
+    padding: 10px;
+  }
+
+  .component-wrapper{
+    margin-left: 100px;
+    padding: 20px;
+    width: 80%;
+  }

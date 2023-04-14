@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import Sidebar from "../Components/Sidebar";
+import "./Style.css";
 
-function UnitConverter() {
+function LengthConverter() {
   const [kilometers, setKilometers] = useState("");
   const [meters, setMeters] = useState("");
   const [centimeters, setCentimeters] = useState("");
@@ -53,7 +55,9 @@ function UnitConverter() {
     setInches(value === "" ? "" : (value * 12).toFixed(2));
   };
   return (
-      <div className="container">
+    <div className="page">
+      <div className="row">
+        <Sidebar />
         <div class="col mt-5 pt-2" id="accordions">
           <div class="component-wrapper rounded shadow">
             <div className="p-3 mb-2 bg-body rounded">
@@ -65,9 +69,7 @@ function UnitConverter() {
                   <h2 className="p-2">Length Conversion</h2>
                 </div>
               </div>
-              <div
-                className="ListItems border-0 "
-              >
+              <div className="ListItems border-0 ">
                 <div className="accordion-body text-muted bg-white">
                   <form>
                     <div className="mb-3">
@@ -138,7 +140,8 @@ function UnitConverter() {
           </div>
         </div>
       </div>
+    </div>
   );
 }
 
-export default UnitConverter;
+export default LengthConverter;
