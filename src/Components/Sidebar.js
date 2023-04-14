@@ -15,7 +15,7 @@ const Sidebar = () => {
           </label>
         </div>
         <div className="nav-item mb-2">
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to ="/" style={{ textDecoration: "none" }}>
             <li
               class="nav-link btn btn-outline-primary p-2 mt-3 active"
               aria-current="page"
@@ -23,7 +23,7 @@ const Sidebar = () => {
               Length Conversion
             </li>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to ="/temp" style={{ textDecoration: "none" }}>
             <li
               class="nav-link btn btn-secondary p-2 mt-3 active"
               aria-current="page"
@@ -31,20 +31,12 @@ const Sidebar = () => {
               Temperature
             </li>
           </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
+          <NavLink to ="/weight" style={{ textDecoration: "none" }}>
             <li
               class="nav-link btn btn-secondary p-2 mt-3 active"
               aria-current="page"
             >
               Weight
-            </li>
-          </NavLink>
-          <NavLink style={{ textDecoration: "none" }}>
-            <li
-              class="nav-link btn btn-secondary p-2 mt-3 active"
-              aria-current="page"
-            >
-              Currency
             </li>
           </NavLink>
         </div>

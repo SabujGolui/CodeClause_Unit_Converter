@@ -92,7 +92,6 @@ function LengthConverter() {
                         type="number"
                         value={meters}
                         onChange={handleMetersChange}
-                        readOnly
                         className="form-control"
                         id="exampleInputPassword1"
                       />
